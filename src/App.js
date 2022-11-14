@@ -1,12 +1,13 @@
-import React, {useEffect} from "react";
-import "./style.css";
+import React, { useEffect } from 'react';
+import './style.css';
+import data from './JSONlog-0-7-A0.json';
 
 export default function App() {
-useEffect(() => {
-  fetch('./JSONlog-0-7-A0.json')
-  .then((response) => response.json)
-  .then((json) => console.log(json));
-}, [])
+  useEffect(() => {
+    fetch('./JSONlog-0-7-A0.json')
+      .then((response) => response.json)
+      .then((json) => console.log(json));
+  }, []);
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
@@ -14,4 +15,3 @@ useEffect(() => {
     </div>
   );
 }
-
